@@ -6,3 +6,20 @@
 .user-msg {
   color: orange;
 }
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.pip-pic {
+  height: 300px;
+  width: 100px;
+  /* border-radius: 50%; */
+}
+.p-name {
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
