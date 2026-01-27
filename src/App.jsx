@@ -17,13 +17,13 @@ const Movies=
       "poster": "https://assets-in.bmscdn.com/discovery-catalog/events/et00401449-yvzgkbpdca-portrait.jpg",
       "rating": 7.5,
       "summary": "A massive war drama sequel set during the 1971 Indo-Pak war. Sunny Deol returns as Major Kuldip Singh Chandpuri to lead a new battalion in a high-stakes battle for sovereignty, featuring intense tank warfare and patriotic sacrifice."
+    },
+    {
+      "name": "Thalaivar Thambi Thalaimaiyil",
+      "poster": "https://assets-in.bmscdn.com/discovery-catalog/events/et00481251-htxqsrdcwb-portrait.jpg",
+      "rating": 8.8,
+      "summary": "A chaotic comedy-drama starring Jiiva as a Panchayat President who gets trapped in a dilemma when a death occurs in one house and a wedding in the neighbor's house simultaneously, forcing him to manage the mayhem."
     }
-    // {
-    //   "name": "Thalaivar Thambi Thalaimaiyil",
-    //   "poster": "https://assets-in.bmscdn.com/discovery-catalog/events/et00481251-htxqsrdcwb-portrait.jpg",
-    //   "rating": 8.8,
-    //   "summary": "A chaotic comedy-drama starring Jiiva as a Panchayat President who gets trapped in a dilemma when a death occurs in one house and a wedding in the neighbor's house simultaneously, forcing him to manage the mayhem."
-    // }
     // {
     //   "name": "Dhurandhar",
     //   "poster": "https://assets-in.bmscdn.com/discovery-catalog/events/et00452447-smmrnuhqrx-portrait.jpg",
