@@ -1,7 +1,6 @@
 import "./index.css";
-// import { Msg } from "../Msg";
-import { User } from "./User";
-import { Counter } from "./Counter";
+import { Msg } from "../Msg";
+import { User } from "../User";
 
 // Component = UI + Logic
 // Props - Arg & Parameter - Properties
@@ -43,13 +42,8 @@ export default function App() {
 
       <section className="user-list-container">
         {users.map((user) => (
-          <>
           <User name={user.name} pic={user.pic} />
-           <Counter/>
-           </>
         ))}
-        
-       
 
         {/* <User
           name="Arjun"
@@ -64,7 +58,6 @@ export default function App() {
           pic="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80"
         /> */}
       </section>
-      
     </div>
     // UI Ends
   );

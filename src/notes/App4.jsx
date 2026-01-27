@@ -1,8 +1,8 @@
 import "./index.css";
 // import { Msg } from "./msg";
-import fun,{dbl} from"./shared";
-import { User } from "./User";
-import { Movie } from "./Movie";
+import fun,{dbl} from"../shared";
+import { User } from "../User";
+import { Movie } from "../Movie";
 
 
 

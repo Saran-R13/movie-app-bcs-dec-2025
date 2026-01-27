@@ -1,3 +1,5 @@
+import { Counter } from "./Counter";
+
 export function User({ name, img}) {
   return (
     <div>
@@ -6,6 +8,8 @@ export function User({ name, img}) {
         Helloo<span className="p-name">{name}</span>👋
         
       </p>
+      
     </div>
+    
   );
 }

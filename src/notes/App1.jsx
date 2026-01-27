@@ -1,7 +1,7 @@
 import "./index.css";
-import { Msg } from "./msg";
-import fun,{dbl} from"./shared";
-import { User } from "./User";
+import { Msg } from "../msg";
+import fun,{dbl} from"../shared";
+import { User } from "../User";
 
 
 // Component = UI + Logic
