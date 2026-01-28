@@ -1,10 +1,8 @@
 import "./index.css";
 // import { Msg } from "../Msg";
 import { User } from "./User";
-import { Counter } from "./Counter";
+// import { Counter } from "./Counter";
 
-// Component = UI + Logic
-// Props - Arg & Parameter - Properties
 export default function App() {
   // Logic Starts
   const names = ["Vikas", "Dhanpal", "Rahul", "Rishi", "Robin"];
@@ -20,32 +18,20 @@ export default function App() {
     },
     {
       name: "Tara",
-      pic: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80",
-    },
+      pic: "https://media.istockphoto.com/id/1187815798/photo/i-will-be-successful.jpg?s=170667a&w=0&k=20&c=YFHcxrh9qK_zESl8K304NGQruH3nYSRgWXfR5cIPsg8=",
+    }
   ];
 
   // Logic Ends
   return (
     // UI Starts
     <div className="App">
-      {/* prop - name */}
-
-      {/* {names.map((name) => (
-        <Msg name={name} />
-      ))} */}
-
-      {/* {names.map((name) => {
-        return <Msg name={name} />;
-      })} */}
-
-      {/* <Msg name="Tara" />
-      <Msg name="Pushpa" /> */}
 
       <section className="user-list-container">
         {users.map((user) => (
           <>
           <User name={user.name} pic={user.pic} />
-           <Counter/>
+           {/* <Counter/> */}
            </>
         ))}
         

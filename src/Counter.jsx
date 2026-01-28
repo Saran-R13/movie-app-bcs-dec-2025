@@ -5,8 +5,7 @@ import "./index.css";
 import { Msg } from "./Msg";
 
 
-// Component = UI + Logic
-// Props - Arg & Parameter - Properties
+// 
 export default function App() {
   // Logic Starts
   const names = ["Vikas", "Dhanpal", "Rahul", "Rishi", "Robin"];
@@ -15,7 +14,7 @@ export default function App() {
   return (
     // UI Starts
     <div className="App">
-      {/* <UserList /> */}
+      <UserList />
 
       {/* <MovieList /> */}
 
@@ -25,16 +24,9 @@ export default function App() {
   );
 }
 
-// Hook - Variable - React tracks
-// Hooks - useState, useEffect, useContext, useMemo
-// Hooks are function
 
-// C = F(S) - Component is function of state -  y = f(x)
 export function Counter() {
-  // Array Destructing
-  //const [state, setState] = useState(Initial_Value)
-  // setState (updates) -> state
-  // React - tracks - Hook variable ✅
+  
   const [like, setLike] = useState(0);
   const [dislike,setDisLike]=useState(0);
   console.log(like);
