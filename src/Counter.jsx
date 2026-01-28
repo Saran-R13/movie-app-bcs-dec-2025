@@ -8,7 +8,7 @@ import { Msg } from "./Msg";
 // 
 export default function App() {
   // Logic Starts
-  const names = ["Vikas", "Dhanpal", "Rahul", "Rishi", "Robin"];
+  // const names = ["Vikas", "Dhanpal", "Rahul", "Rishi", "Robin"];
 
   // Logic Ends
   return (

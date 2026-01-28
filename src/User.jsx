@@ -7,7 +7,7 @@ export function User({ name, pic}) {
       <p>
         Helloo<span className="p-name">{name}</span>👋
         </p>
-        {/* <Counter/> */}
+        <Counter/>
     </div>
     
   );
