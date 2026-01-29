@@ -1,3 +1,4 @@
+import { Movie } from "../Movie";
 import { Movie1 } from "./Movie1";
 import {RESEND_MOVIES} from "./movies1-data";
 
@@ -6,7 +7,7 @@ const Movies=RESEND_MOVIES;
 return(
     <section className="movie-list-container">
         {Movies.map((mv)=>(
-            <Movies movie={mv}/>
+            <Movie1 movie={mv}/>
         ))}
     </section>
 )

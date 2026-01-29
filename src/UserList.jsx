@@ -19,6 +19,7 @@ export function UserList() {
     },
   ];
 
+  // If the like is 10 or more than the dislike print "Your awesome"
   return (
     <section className="user-list-container">
       {users.map(({ name, pic }) => (

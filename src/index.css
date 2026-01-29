@@ -1,42 +1,88 @@
+
 .App {
   font-family: sans-serif;
-  text-align: center;
-  display: flex;
-  
+  /* text-align: center; */
 }
-/* .Movie{
-  
-} */
 
-.card-box{
+.user-msg {
+  color: orange;
+}
+
+.user-pic {
+  height: 10rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  /* border: 4px solid; */
+}
+
+.user-greeting {
+  margin-top: 0.25rem;
+  margin-bottom: 0rem;
+}
+
+.user-greeting span {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.user-list-container {
   display: flex;
   flex-direction: column;
-  place-content: center;
-
-  /* border-radius: 1rem; */
-  /* border: solid 2px black; */
-  /* background-color: antiquewhite; */
-  /* width: 400px; */
+  gap: 1.5rem;
 }
-.App {
-  font-family: sans-serif;
-  text-align: center;
+
+.movie-container {
+  /* background: orange; */
+  width: 20rem;
+
+  img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  .movie-name,
+  .movie-rating {
+    margin: 0.75rem 0rem;
+  }
+
+  .movie-rating {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .movie-summary {
+    margin: 0;
+    line-height: 1.3;
+  }
+}
+
+.movie-spec-container {
   display: flex;
-  /* flex-direction: column; */
-  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
 }
-.pip-pic {
-  object-fit: cover;
-  border-radius: 2rem;
-  
-  height: 450px;
-  width: 300px;
-  padding-left:0 ;
 
-  border-radius: 50%;
+.movie-list-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.p-name {
-  font-family: sans-serif;
-  font-style: italic;
-  /* font-weight: bold; */
+
+.user-container {
+  text-align: center;
+}
+
+.counter-btn-container {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.counter-btn-container-center {
+  justify-content: center;
+}
+.buttontog{
+  background-color: yellow;
 }

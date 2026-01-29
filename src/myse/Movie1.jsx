@@ -1,3 +1,5 @@
+import { Counter } from "../Counter";
+
 export function Movie1({name,poster,summary,ratings}){
     return(
         <div className="card-box">
@@ -5,6 +7,8 @@ export function Movie1({name,poster,summary,ratings}){
             <p>
               <span className="p-name">{name}{summary}{ratings}</span>  
             </p>
+            <Counter/>
+            
         </div>
     )
 }
