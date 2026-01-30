@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Counter } from "./Counter";
+// import { Counter } from "./Counter";
 
 // Presentation Component
 export function Movie({ movie }) {
 
-  const [show,setshow]=useState(true)
+  // const [show,setshow]=useState(true)
 
   return (
     <div className="movie-container">
@@ -15,11 +15,11 @@ export function Movie({ movie }) {
         <p className="movie-rating">⭐ {movie.rating}</p>
       </div>
 
-      <button  onClick={()=>setshow(!show)}>Toggle Summary </button>
+      {/* <button  onClick={()=>setshow(!show)}>Toggle Summary </button> */}
       
-      {show ? <p className="movie-summary">{movie.summary}</p> : null}
+      {/* {show ? <p className="movie-summary">{movie.summary}</p> : null} */}
       {/* Parent -> Child (data) - Props */}
-      <Counter needProgress={false} />
+      {/* <Counter needProgress={false} /> */}
     </div>
   );
 }
