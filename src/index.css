@@ -1,7 +1,15 @@
-
 .App {
   font-family: sans-serif;
   /* text-align: center; */
+}
+
+nav {
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0px;
+  }
 }
 
 .user-msg {
@@ -58,7 +66,7 @@
 }
 
 .movie-spec-container {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
 }
@@ -83,6 +91,12 @@
 .counter-btn-container-center {
   justify-content: center;
 }
-.buttontog{
-  background-color: yellow;
+
+.add-movie-form-container {
+  display: grid;
+  gap: 1rem;
+  max-width: 20rem;
+
+  margin: 0rem auto;
+  margin-bottom: 2rem;
 }
