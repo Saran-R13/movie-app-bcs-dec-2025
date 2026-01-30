@@ -1,4 +1,4 @@
-const x=10;
+// const x=10;
 function dbl(n){
     return n*2;
 }

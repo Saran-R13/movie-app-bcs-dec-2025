@@ -9,7 +9,7 @@ import { UserList } from "../UserList";
 // Props - Arg & Parameter - Properties
 export default function App() {
   // Logic Starts
-  const names = ["Vikas", "Dhanpal", "Rahul", "Rishi", "Robin"];
+  // const names = ["Vikas", "Dhanpal", "Rahul", "Rishi", "Robin"];
 
   // Logic Ends
   return (

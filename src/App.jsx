@@ -10,8 +10,14 @@ export default function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/MovieList"> Movie</Link>
-        <Link to="/UserList">user</Link>
+        <ul>
+          <li>
+            <Link to="/MovieList"> Movie</Link>
+          </li>
+          <li>
+            <Link to="/UserList">user</Link>
+          </li>
+        </ul>
       </nav>
       <Routes>
         <Route path="/MovieList" element={<MovieList />} />

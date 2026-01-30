@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Movie } from "./Movie";
 import { INITIAL_MOVIES } from "./movies-data";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 
 // Smart
 export function MovieList() {
@@ -16,35 +18,70 @@ export function MovieList() {
     summary: summary,
   };
   return (
-    <div>
-      <input
+    <div className="movie-input">
+      <TextField
+        label="Name"
+        // color="secondary"
+        focused
+        value={name}
+        onChange={(event) => setName(event.target.value)}
+      />
+      {/* <input
         value={name}
         onChange={(event) => setName(event.target.value)}
         type="text"
         placeholder="Movie Name"
+      /> */}
+      <TextField
+        label="URL"
+        // color="secondary"
+        focused
+        value={poster}
+        onChange={(event) => setPoster(event.target.value)}
       />
-      <input
+      {/* <input
         value={poster}
         onChange={(event) => setPoster(event.target.value)}
         type="text"
         placeholder="Movie URL"
+      /> */}
+      <TextField
+        label="Rating"
+        // color="secondary"
+        focused
+        value={rating}
+        onChange={(event) => setRating(event.target.value)}
       />
-      <input
+      {/* <input
         value={rating}
         onChange={(event) => setRating(event.target.value)}
         type="number"
         placeholder="Ratings"
+      /> */}
+      <TextField
+        label="Summary"
+        // color="secondary"
+        focused
+        value={summary}
+        onChange={(event) => setSummary(event.target.value)}
       />
-      <input
+      {/* <input
         value={summary}
         onChange={(event) => setSummary(event.target.value)}
         type="text"
         placeholder="Summary"
-      />
+      /> */}
+      <Button
+        variant="contained"
+        disableElevation
+        onClick={() => setMovies([newMovie, ...movies])}
+      >
+        ADD MOVIES
+      </Button>
 
-      <button onClick={() => setMovies([newMovie, ...movies])}>
+      {/* <button onClick={() => setMovies([newMovie, ...movies])}>
         Add Movie
-      </button>
+      </button> */}
       {movies.map((movie) => (
         <Movie movie={movie} />
       ))}
