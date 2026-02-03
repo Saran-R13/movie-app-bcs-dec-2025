@@ -1,9 +1,10 @@
-// import { useState } from "react";
+// import { Delete } from "@mui/icons-material";
+import { useState } from "react";
 // import { Counter } from "./Counter";
 
 // Presentation Component
-export function Movie({ movie }) {
-  // const [show,setshow]=useState(true)
+export function Movie({ movie, Delete }) {
+  const [show, setshow] = useState(true);
 
   return (
     <div className="movie-container">
@@ -12,12 +13,19 @@ export function Movie({ movie }) {
       <div className="movie-spec-container">
         <h2 className="movie-name">{movie.name}</h2>
         <p className="movie-rating">⭐ {movie.rating}</p>
-        <p className="movie-summary">{movie.summary}</p>
       </div>
 
-      {/* <button  onClick={()=>setshow(!show)}>Toggle Summary </button> */}
+      <button onClick={() => setshow(!show)}>Toggle Summary </button>
 
-      {/* {show ? <p className="movie-summary">{movie.summary}</p> : null} */}
+      {show ? <p className="movie-summary">{movie.summary}</p> : null}
+
+      <button
+        onClick={() => {
+          Delete(movie.id);
+        }}
+      >
+        Delete
+      </button>
       {/* Parent -> Child (data) - Props */}
       {/* <Counter needProgress={false} /> */}
     </div>

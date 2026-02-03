@@ -12,11 +12,16 @@ export function MovieList() {
   const [rating, setRating] = useState("");
   const [summary, setSummary] = useState("");
   const newMovie = {
+    // id: { Delete: FunDelete },
     name: name,
     poster: poster,
     rating: rating,
     summary: summary,
   };
+  function FunDelete(id) {
+    const balMovie = movies.filter((movie) => movie.id != id);
+    return setMovies(balMovie);
+  }
   return (
     <div className="movie-input">
       <TextField
@@ -82,8 +87,8 @@ export function MovieList() {
       {/* <button onClick={() => setMovies([newMovie, ...movies])}>
         Add Movie
       </button> */}
-      {movies.map((movie) => (
-        <Movie movie={movie} />
+      {movies.map((movie, id) => (
+        <Movie key={movie.id} movie={movie} Delete={FunDelete} id={id} />
       ))}
     </div>
   );
