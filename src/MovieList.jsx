@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Movie } from "./Movie";
 import { INITIAL_MOVIES } from "./movies-data";
 import Button from "@mui/material/Button";
@@ -6,7 +6,7 @@ import TextField from "@mui/material/TextField";
 
 // Smart
 export function MovieList() {
-  const [movies, setMovies] = useState(INITIAL_MOVIES);
+  const [movies, setMovies] = useState([]);
   const [name, setName] = useState("");
   const [poster, setPoster] = useState("");
   const [rating, setRating] = useState("");
@@ -18,6 +18,12 @@ export function MovieList() {
     rating: rating,
     summary: summary,
   };
+  useEffect(() => {
+    fetch("https://6971d21632c6bacb12c49d51.mockapi.io/Movies")
+      .then((response) => response.json())
+      .then((data) => setMovies(data));
+  }, []);
+
   function FunDelete(id) {
     const balMovie = movies.filter((movie) => movie.id != id);
     return setMovies(balMovie);
