@@ -1,9 +1,10 @@
 // import { Delete } from "@mui/icons-material";
+import { Edit } from "@mui/icons-material";
 import { useState } from "react";
 // import { Counter } from "./Counter";
 
 // Presentation Component
-export function Movie({ movie, Delete }) {
+export function Movie({ movie, Delete ,Edit}) {
   const [show, setshow] = useState(true);
 
   return (
@@ -26,6 +27,7 @@ export function Movie({ movie, Delete }) {
       >
         Delete
       </button>
+      {Edit}
       {/* Parent -> Child (data) - Props */}
       {/* <Counter needProgress={false} /> */}
     </div>

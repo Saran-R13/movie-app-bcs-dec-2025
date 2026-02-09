@@ -28,6 +28,10 @@ export function MovieList() {
     const balMovie = movies.filter((movie) => movie.id != id);
     return setMovies(balMovie);
   }
+  function EditButton() {
+    console.log("ROUND Button");
+  }
+
   return (
     <div className="movie-input">
       <TextField
@@ -94,7 +98,13 @@ export function MovieList() {
         Add Movie
       </button> */}
       {movies.map((movie, id) => (
-        <Movie key={movie.id} movie={movie} Delete={FunDelete} id={id} />
+        <Movie
+          key={movie.id}
+          movie={movie}
+          Delete={FunDelete}
+          id={id}
+          Edit={<button onClick={() => EditButton()}>Edit</button>}
+        />
       ))}
     </div>
   );
