@@ -5,12 +5,16 @@ export function MovieDetails() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   // GET the movie details from API
-  useEffect(() => {
+  const getMovies = () => {
     fetch(`https://6971d21632c6bacb12c49d51.mockapi.io/Movies/${id}`, {
-      method: "Get",
+      method: "GET",
     })
       .then((res) => res.json())
       .then((data) => setMovie(data));
+  };
+
+  useEffect(() => {
+    getMovies();
   }, [id]);
   const navigate = useNavigate();
   if (!movie) {
@@ -31,6 +35,7 @@ export function MovieDetails() {
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
+
       <div className="movie-spec-container">
         <h2 className="movie-name">{movie?.name}</h2>
         <p className="movie-rating">⭐ {movie?.rating}</p>
