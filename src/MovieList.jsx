@@ -7,6 +7,7 @@ import { useNavigate } from "react-router";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { API } from "./global";
 
 // Smart
 export function MovieList() {
@@ -98,7 +99,7 @@ export function AddMovie() {
       summary: summary,
       trailer: trailer,
     };
-    fetch("https://6971d21632c6bacb12c49d51.mockapi.io/Movies", {
+    fetch(`${API}/Movies`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

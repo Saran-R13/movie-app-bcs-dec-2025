@@ -2,8 +2,8 @@ import { Link, Navigate, Route, Routes } from "react-router";
 import "./index.css";
 import { AddMovie, MovieList } from "./MovieList";
 
-// import { ColorGame } from "./ColorGame";
-// import { Home } from "./Home";
+import { ColorGame } from "./ColorGame";
+import { Home } from "./Home";
 import { MovieDetails } from "./MovieDetails";
 // import { NotFound } from "./NotFound";
 import { UserList } from "./UserList";
@@ -17,6 +17,9 @@ export default function App() {
       {/* < BasicForm/> */}
       <nav>
         <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>
             <Link to="/movies">Movies</Link>
           </li>
@@ -36,7 +39,7 @@ export default function App() {
       </nav>
       <Routes>
         {/*    / -> Home    */}
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="users" element={<UserList />} />
 
         {/* Old users -> films */}
@@ -51,7 +54,7 @@ export default function App() {
         <Route path="movies/add" element={<AddMovie />} />
         <Route path="basic-form" element={<BasicForm />} />
 
-        {/* <Route path="color-game" element={<ColorGame />} /> */}
+        <Route path="color-game" element={<ColorGame />} />
 
         {/*    * -> catch all -> Always last      */}
         {/* <Route path="*" element={<NotFound />} /> */}
