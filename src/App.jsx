@@ -8,6 +8,7 @@ import { MovieDetails } from "./MovieDetails";
 // import { NotFound } from "./NotFound";
 import { UserList } from "./UserList";
 import { BasicForm } from "./BasicForm";
+import { Church } from "@mui/icons-material";
 
 export default function App() {
   // App is mounted - GET - componentDidMount
@@ -44,8 +45,14 @@ export default function App() {
 
         {/* Old users -> films */}
         <Route path="films" element={<Navigate replace to="/movies" />} />
-        {/* <Route path="films" element={<MovieList />} /> */}
-        <Route path="movies" element={<MovieList />} />
+        <Route
+          path="movies"
+          element={
+            <ProtectedRoute>
+              <MovieList />
+            </ProtectedRoute>
+          }
+        />
 
         {/* /movies ->  /movies/102  */}
         {/* : -> will treat id as variable - /movies/1 ->   id -> 1 */}
@@ -56,9 +63,16 @@ export default function App() {
 
         <Route path="color-game" element={<ColorGame />} />
 
+        <Route path="login" element={<BasicForm />} />
+
         {/*    * -> catch all -> Always last      */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>
   );
+}
+function ProtectedRoute({ children }) {
+  const token = localStorage.getItem("token");
+
+  return token ? children : <Navigate replace to="/login" />;
 }

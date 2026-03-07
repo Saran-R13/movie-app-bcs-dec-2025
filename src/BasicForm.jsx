@@ -1,40 +1,68 @@
 import { useFormik } from "formik";
 
+import { API } from "./global";
 import { object, string } from "yup";
+import { useNavigate } from "react-router";
 
 let loginValidationSchema = object({
-  username: string().required("user name is missing😞").min(4,"username is so sort 😂 "),
-  password: string().required("why not fill the blon")
+  username: string()
+    .required("user name is missing😞")
+    .min(4, "username is so sort 😂 "),
+  password: string().required("why not fill the blon"),
 });
 
 export function BasicForm() {
-  const formik = useFormik({
-    initialValues: {
-      username: "tara 1",
-      password: "abc",
-    },
-    validationSchema: loginValidationSchema,
-    onSubmit: (data) => {
-      console.log("When all validations passes");
-      console.log("All data", data);
-    },
-  });
+  const navigate = useNavigate();
+  const { handleSubmit, values, handleChange, handleBlur, touched, errors } =
+    useFormik({
+      initialValues: {
+        username: "",
+        password: "",
+      },
+      validationSchema: loginValidationSchema,
+      onSubmit: (data) => {
+        console.log("When all validations passes");
+        console.log("All data", data);
+
+        fetch(`${API}/auth/login`, {
+          method: "post",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+
+            if (data?.token) {
+              localStorage.setItem("token", data.token);
+              navigate("/movies");
+            }
+          });
+      },
+    });
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="username"
-        value={formik.values.username}
-        onChange={formik.handleChange}
+        value={values.username}
+        onChange={handleChange}
+        onBlur={handleBlur}
         name="username"
       />
+
+      {touched.username && errors.username ? errors.username : null}
+
       <input
         type="text"
         placeholder="password"
-        value={formik.values.password}
-        onChange={formik.handleChange}
+        value={values.password}
+        onChange={handleChange}
+        onBlur={handleBlur}
         name="password"
       />
+
+      {touched.password && errors.password ? errors.password : null}
       <button type="submit">Login</button>
     </form>
   );
